@@ -3,7 +3,7 @@ import styles from './Button.module.css'
 import ArrowIcon from './arrow.svg'
 import cn from 'classnames'
 
-export default function Button({ children, appearance, className, arrow = 'none', ...props }: ButtonProps): JSX.Element {
+export const Button = ({ children, appearance, className, arrow = 'none', ...props }: ButtonProps): JSX.Element => {
 
     return (
         <button
@@ -13,6 +13,15 @@ export default function Button({ children, appearance, className, arrow = 'none'
 
             })}
             {...props}
+
+
+
+        // Можно так   
+        // className={cn(styles.button, className, styles[appearance]
+        // )}
+        // {...props}
+
+
         >
             {children}
             {arrow != 'none' && <span className={cn(styles.arrow, {
