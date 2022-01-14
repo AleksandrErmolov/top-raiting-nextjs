@@ -3,11 +3,11 @@ import styles from './Button.module.css'
 import ArrowIcon from './arrow.svg'
 import cn from 'classnames'
 
-export default function Htag({ children, appearance, className, arrow='none', ...props }: ButtonProps): JSX.Element {
+export default function Button({ children, appearance, className, arrow = 'none', ...props }: ButtonProps): JSX.Element {
 
     return (
         <button
-            className={cn(styles.button, className,{
+            className={cn(styles.button, className, {
                 [styles.primary]: appearance == 'primary',
                 [styles.ghost]: appearance == 'ghost',
 
@@ -15,11 +15,10 @@ export default function Htag({ children, appearance, className, arrow='none', ..
             {...props}
         >
             {children}
-            {arrow !== "none" && <span className={cn(styles.arrow, {
-                [styles.down]: arrow = 'down',
+            {arrow != 'none' && <span className={cn(styles.arrow, {
+                [styles.down]: arrow == 'down'
             })}>
-            
-            <ArrowIcon />
+                <ArrowIcon />
             </span>}
         </button>
     )
