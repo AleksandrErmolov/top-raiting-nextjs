@@ -6,6 +6,8 @@ import { Button, Htag, P, Rating, Tag } from '../components/';
 export default function Home(): JSX.Element {
 
   const [counter, setCounter] = useState<number>(0)
+
+  const [rating, setRating] = useState<number>(4);
   
   useEffect(() => {
     console.log('counter', counter)
@@ -26,7 +28,7 @@ export default function Home(): JSX.Element {
       <Tag size='m' color='red'>Red</Tag>
       <Tag size='s' color='green'>Зелёный</Tag>
       <Tag color="primary">Маленький</Tag>
-      <Rating rating={3} />
+      <Rating rating={rating} isEditable setRating={setRating}/>
 
 
 
