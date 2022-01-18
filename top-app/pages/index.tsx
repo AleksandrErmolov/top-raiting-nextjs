@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Button, Htag, P, Rating, Tag } from '../components/';
-import { Layout, withLayout } from '../layout/Layout'
+import { withLayout } from '../layout/Layout'
 import axios from "axios"
 import { GetStaticProps } from 'next'
 import { MenuItem } from '../interfaces/menu.interface';
